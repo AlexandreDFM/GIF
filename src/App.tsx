@@ -16,10 +16,10 @@ function App() {
     return (
         <>
             <Timer />
-            
+
             <Router>
                 <Routes>
-                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/profile" element={<Profile />} />
