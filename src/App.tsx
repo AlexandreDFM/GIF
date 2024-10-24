@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 import './App.css'
 
@@ -15,20 +15,32 @@ function App() {
     const [count, setCount] = useState(0)
 
     return (
-        <>
-            <Navbar />
-            <Timer />
-
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/home" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/profile" element={<Profile />} />
-                </Routes>
-            </Router>
-        </>
+        <Router>
+            <Content />
+        </Router>
     )
 }
 
-export default App
+function Content() {
+    const location = useLocation();
+
+    return (
+        <>
+            {location.pathname !== '/login' && (
+                <>
+                    <Navbar />
+                    <Timer />
+                </>
+            )}
+
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/profile" element={<Profile />} />
+            </Routes>
+        </>
+    );
+}
+
+export default App;
