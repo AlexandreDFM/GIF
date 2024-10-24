@@ -1,6 +1,4 @@
 import "./sidebar.css";
-import { useState } from "react";
-import SidebarBtn from "./sidebar-btn.tsx";
 import { FaCompass } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
 import { BiSolidAlbum } from "react-icons/bi";
@@ -26,7 +24,7 @@ export interface SidebarMenuRedirect {
 }
 
 export const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const isSidebarOpen = false;
 
     const sidebarMenuRedirect: SidebarMenuRedirect[] = [
         {

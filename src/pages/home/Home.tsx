@@ -1,8 +1,4 @@
-import { useState } from 'react'
-import reactLogo from '../../assets/react.svg'
-import viteLogo from '/vite.svg'
 import './Home.css'
-
 import homehero from '../../assets/homehero.png';
 import cover1 from '../../assets/cover1.jpg';
 import cover2 from '../../assets/cover2.jpg';
