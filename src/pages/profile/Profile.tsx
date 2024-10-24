@@ -7,74 +7,130 @@ import cover5 from '../../assets/cover5.jpg';
 import cover6 from '../../assets/cover6.jpg';
 import cover7 from '../../assets/cover7.jpg';
 import cover8 from '../../assets/cover8.jpg';
+import account from '../../assets/guy.jpg';
+
+import { IoPlaySharp } from "react-icons/io5";
+import { AiOutlineDownload } from "react-icons/ai";
+
+import accappella from '../../assets/accapella.wav';
+import accappella2 from '../../assets/accapella2.wav';
+import accappella3 from '../../assets/accapella3.wav';
+import accappella4 from '../../assets/accapella4.wav';
+import accappella5 from '../../assets/accapella5.wav';
+import accappella6 from '../../assets/accapella6.wav';
+
+import AudioWaveform from '../../components/AudioWaveform/AudioWaveform';
+import { useRef, useState, useEffect } from 'react';
 
 function Profile() {
-  const tabCover = [
-    { id: 1, img: cover1, title: 'Vocal Studies and Uplifting Beats', description: 'Prefuse 73' },
-    { id: 2, img: cover2, title: 'Temples', description: 'Kadhja Bonet' },
-    { id: 3, img: cover3, title: 'Earth Tones', description: 'The Du-Rites' },
-    { id: 4, img: cover4, title: 'Kollection 6', description: 'Kendrick Lamar' },
-    { id: 5, img: cover5, title: 'The Epic', description: 'Kamasi Washington' },
-    { id: 6, img: cover6, title: 'The Dream', description: 'Akif' },
-    { id: 7, img: cover7, title: 'The Dream', description: 'Akif' },
-    { id: 8, img: cover8, title: 'The Dream', description: 'Akif' }
-  ]
-  return (
-    <>
-      <div className="profile-container">
-        <div className="profile-hero">
-          <div className='profile-hero-image'>
-            <img src="https://reactnative.dev/docs/assets/p_cat1.png" alt="profile" />
-          </div>
-          <div className='profile-acapella-extract'>
-            <div className='profile-acapella'>
-              <div className='first'>
-                01
-              </div>
-              <div className='line'>
-                -----------------------
-              </div>
-              <div className='second'>
-                02
-              </div>
-            </div>
-            <div className='profile-next-prev'>
-              <button className="prev">◀</button>
-              <button className="next">▶</button>
-            </div>
-          </div>
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+    const [durations, setDurations] = useState<number[]>([]);
 
-        </div>
-        <div className="profile-content">
-          <h3 className='work'>Musician</h3>
-          <h1 className='name'>Scool Beat</h1>
-          <p className='description'>Is a old guy who is bad at managing his lane but at least he is a good frontend developper and musician</p>
-          <h2 className='read-more'>Read More</h2>
-          <h3 className='some-music'>Some of his music :</h3>
-          <div className="home-content">
-            <div className='cover'>
-              <div className="grid-container">
-                {
-                  tabCover.map((cover) => (
-                    <div key={cover.id} className="grid-item">
-                      <div className='on-hover'></div>
-                      <img src={cover.img} alt='cover1' />
-                      <h1>
-                        {cover.title.length > 17 ? `${cover.title.substring(0, 17)}...` : cover.title}
-                      </h1>
-                      <p>
-                        {cover.description.length > 17 ? `${cover.description.substring(0, 17)}...` : cover.description}
-                      </p>
+    useEffect(() => {
+        const audioElements = tabCover.map((cover) => {
+            const audio = new Audio(cover.song);
+            audio.addEventListener('loadedmetadata', () => {
+                setDurations((prevDurations) => {
+                    const newDurations = [...prevDurations];
+                    newDurations[cover.id] = audio.duration;
+                    return newDurations;
+                });
+            });
+            return audio;
+        });
+
+        return () => {
+            audioElements.forEach((audio) => {
+                audio.removeEventListener('loadedmetadata', () => { });
+            });
+        };
+    }, []);
+
+    const tabCover = [
+        { id: 1, img: cover1, title: 'Vocal Studies', description: 'Prefuse 73', song: accappella },
+        { id: 2, img: cover2, title: 'Temples', description: 'Kadhja Bonet', song: accappella2 },
+        { id: 3, img: cover3, title: 'Earth Tones', description: 'The Du-Rites', song: accappella3 },
+        { id: 4, img: cover4, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella4 },
+        { id: 5, img: cover5, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella5 },
+        { id: 6, img: cover6, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella6 },
+    ]
+
+    const formatDuration = (duration: number) => {
+        if (!duration) return '0:00';
+        const minutes = Math.floor(duration / 60);
+        const seconds = Math.floor(duration % 60).toString().padStart(2, '0');
+        return `${minutes}:${seconds}`;
+    };
+
+    return (
+        <div className='profile'>
+            <div className="profile-container">
+                <div className="profile-content">
+                    <div className='img-profile'>
+                        <img src={account} alt="account" />
                     </div>
-                  ))
-                }
-              </div>
+
+                    <div className='info-profile'>
+                        <div>
+                            <h2>John Doe</h2>
+                            <p>Man singer specializing in R&B and Soul music</p>
+                            <h3>
+                                • R&B • Soul • 105 samples
+                            </h3>
+                        </div>
+
+                        <div className='preview'>
+                            <button>
+                                <IoPlaySharp />
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
+            <div className='trait'></div>
+
+            <div className='artist-desc'>
+                <p>
+                    John Doe is an American singer, songwriter, and record producer. He is known for his distinctive falsetto and eccentric music style. He has received numerous awards, including 11 Grammy Awards, 7 Billboard Music Awards, and 6 American... <span>Read more</span>
+                </p>
+            </div>
+            <div className='trait'></div>
+
+            <div className='samples'>
+                <h2>Samples</h2>
+
+
+                <div className='samples-container'>
+                    {tabCover.map((cover) => (
+                        <div>
+                            <div className='trait2'></div>
+                            <div key={cover.id} className='cover'>
+                                <div className='info-spectre'>
+                                    <img src={cover.img
+                                    } alt="cover" />
+                                    <div className='titlecover'>
+                                        <h3>{cover.title}</h3>
+                                        <p>{cover.description}</p>
+                                    </div>
+                                </div>
+                                <AudioWaveform audioFile={cover.song} />
+
+                                <div className='download'>
+                                    <h3>{formatDuration(durations[cover.id])}</h3>
+
+                                    <a href={cover.song} download="my-audio-file.wav">
+                                        <AiOutlineDownload size={25} />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
-      </div>
-    </>
-  )
+    )
 }
 
 export default Profile

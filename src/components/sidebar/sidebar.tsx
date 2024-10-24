@@ -121,10 +121,6 @@ export const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
                 {isSidebarOpen ? (
                     <section>
                         <div className="unfolded">
-                            <SidebarBtn
-                                icon={"unfolded"}
-                                onClick={() => setIsSidebarOpen(false)}
-                            />
                             <nav className={"sidebar-content-container"}>
                                 {sidebarMenuRedirect.map((menu) => (
                                     <>
@@ -167,10 +163,6 @@ export const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
                     </section>
                 ) : (
                     <div className="folded">
-                        <SidebarBtn
-                            icon={"folded"}
-                            onClick={() => setIsSidebarOpen(true)}
-                        />
                         <nav className={"sidebar-content-container"}>
                             {sidebarMenuRedirect.map((menu) => (
                                 <ul className="flex center sidebar-content">

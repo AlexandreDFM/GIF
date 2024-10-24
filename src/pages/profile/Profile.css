@@ -1,176 +1,141 @@
+.profile {
+    margin: 0 100px;
+    margin-top: 100px;
+}
+
 .profile-container {
-    padding-top: 5%;
     display: flex;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(to right,  orange 0%, orange 20%, white 20%, white 70%);
-}
-
-.profile-hero {
-    color: black;
-    width: 50%;
-    padding-left: 5%;
-}
-
-.profile-hero-image {
-    width: 80%;
-    height: 60%;
-}
-
-.profile-acapella-extract {
-    width: 80%;
-    height: 10%;
-    display: flex;
-}
-
-.profile-acapella {
-    width: 60%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    padding-top: 4%;
-    gap: 5%;
-}
-
-.first {
-    width: 20%;
-    height: 100%;
-    color: orange;
-    padding-left: 15%;
-}
-
-.line {
-    color: orange;
-}
-
-.second {
-    width: 20%;
-    height: 100%;
-    color: orange;
-}
-
-.profile-next-prev {
-    width: 20%;
-    background-color: orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.next {
-    width: 50%;
-    height: 100%;
-    background-color: orange;
-    color: black;
-    border: none;
-    border-color: orange;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
-}
-
-.next:hover {
-    color: white;
-}
-
-.prev {
-    width: 50%;
-    height: 100%;
-    background-color: orange;
-    color: black;
-    border-color: orange;
-    border: none;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
-}
-
-.prev:hover {
-    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 .profile-content {
-    color: black;
-    width: 50%;
-}
-
-.work {
-    background-color: grey;
-    color: white;
-    padding: 1%;
-    max-width: 10%;
-    margin-bottom: 3%;
-}
-
-.name {
-    color: black;
-    font-size: 4rem;
-    margin-bottom: 1%;
-}
-
-.description {
-    color: lightblue;
-    margin-bottom: 5%;
-}
-
-.read-more {
-    color: black;
-    font-size: 1.5rem;
-    margin-bottom: 5%;
-}
-
-.some-music {
-    color: black;
-    font-size: 1.5rem;
-    margin-bottom: 5%;
-}
-
-.on-hover {
-    background-color: rgba(77, 77, 77, 0.5);
-    cursor: pointer;
-}
-
-
-.home-content .cover .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-  }
-  
-.home-content .cover .grid-container .grid-item {
-    text-align: center;
-}
-
-.home-content .cover .grid-container .grid-item h1 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-.home-content .cover .grid-container .grid-item img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-    border-radius: 30px;
-}
-
-.home-content .cover .grid-container .grid-item {
-    text-align: left;
+    /* background-color: red; */
     position: relative;
-}
-
-.home-content .cover .grid-container .grid-item .on-hover {
-    position: absolute;
-    top: calc(50% - 150px);
-    left: calc(50% - 120px);
-    width: 115%;
-    height: 112%;
-    background-color: rgba(77, 77, 77, 0.0);
-    border-radius: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: 0.5s;
+    gap: 30px;
+    margin-bottom: 20px;
 }
 
-.home-content .cover .grid-container .grid-item .on-hover:hover {
-    background-color: rgba(77, 77, 77, 0.5);
+.img-profile img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.info-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-profile h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #b7b7b7;
+}
+
+.info-profile h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #b7b7b7;
+}
+
+
+.info-profile p {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.preview button {
+    background-color: #2b2b2b;
+    border: 1px solid #454545;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trait {
+    width: 100%;
+    height: 1px;
+    background-color: #454545;
+    margin-top: 20px;
+}
+
+.artist-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 20px 0 10px 0;
+}
+
+.artist-desc span {
+    color: rgb(113, 113, 113);
+    font-weight: 600;
+}
+
+.samples {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+.samples h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.cover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 10px 0 15px 0;
+}
+
+.cover img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.info-spectre {
+    display: flex;
+    gap: 20px;
+}
+
+.titlecover {
+    width: 150px;
+}
+
+.trait2 {
+    width: 100%;
+    height: 1px;
+    background-color: #454545;
+    margin-bottom: 10px;
+}
+
+.cover .download {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 50px;
+}
+
+.cover .download a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
 }

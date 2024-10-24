@@ -7,26 +7,26 @@ import guy from '../../assets/guy.jpg';
 
 
 function Navbar() {
-  return (
-    <div className='navbar'>
-        <div className='logo'>
-            <h1>Eumag</h1>
-        </div>
+    return (
+        <div className='navbar'>
+            <div className='logo' onClick={() => window.location.href = '/home'}>
+                <h1>Eumag</h1>
+            </div>
 
-        <div className='middle'>
-            <IoSearch className='icon'/>
-            <a href='#' className='bold'>New Releases</a>
-            <a href='#'>New feed</a>
-            <a href='#'>Shuffle Play</a>
-        </div>
+            <div className='middle'>
+                <IoSearch className='icon' />
+                <a href='#' className='bold'>New Releases</a>
+                <a href='#'>New feed</a>
+                <a href='#'>Shuffle Play</a>
+            </div>
 
-        <div className='account'>
-            <img src={guy} alt='guy' />
-            <h3>John Doe</h3>
-            <IoMenu className='icon'/>
+            <div className='account' onClick={() => window.location.href = '/profile'}>
+                <img src={guy} alt='guy' />
+                <h3>John Doe</h3>
+                <IoMenu className='icon' />
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Navbar

@@ -1,0 +1,12 @@
+.audiocss {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    color: #555555;
+    transition: 0.5s;
+}
+
+.audiocss:hover {
+    color: #ffffff;
+}

@@ -12,6 +12,10 @@
     backdrop-filter: blur(50px);
 }
 
+.navbar .logo {
+    cursor: pointer;
+}
+
 .navbar .logo h1 {
     margin: 0;
     font-size: 22px;
@@ -49,6 +53,7 @@
 .navbar .account {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .navbar .account img {

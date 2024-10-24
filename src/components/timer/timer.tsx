@@ -40,6 +40,12 @@ function Timer() {
         }
     };
 
+    const downloadAudio = () => {
+        if (audioRef.current) {
+            window.open(audioRef.current.src);
+        }
+    }
+
     useEffect(() => {
         const audioElement = audioRef.current;
 
@@ -69,7 +75,9 @@ function Timer() {
 
                 <div className="progress-container">
                     <div className="progress-input">
-                        <AiOutlineDownload size={25} />
+                        <a href={accappella} download="my-audio-file.wav">
+                            <AiOutlineDownload size={25} />
+                        </a>
                         <MdSkipPrevious size={30} />
                         <audio ref={audioRef} src={accappella} />
                         <div className="play-pause" onClick={() => (isSongIsPlaying ? pauseAudio() : playAudio())}>
