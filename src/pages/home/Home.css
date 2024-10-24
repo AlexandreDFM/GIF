@@ -1,0 +1,112 @@
+.home {
+    margin-top: 120px;
+    margin-left: 350px;
+    width: 1000px;
+    margin-bottom: 150px;
+}
+
+.home .home-hero {
+    width: 1000px;
+    height: 350px;
+    background-color: rgb(232,98,57);
+    position: relative;
+    border-radius: 50px;
+
+    padding: 80px 80px 50px 80px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 50px;
+}
+
+.home .home-hero img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50px;
+}
+
+.home .home-hero .content-hero {
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home .home-hero .content-hero .bot-hero {
+    margin-top: 50px;
+}
+
+.home .home-hero .content-hero .title-hero h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.home .home-hero .content-hero .title-hero h3 {
+    font-size: 17px;
+    font-weight: 300;
+    max-width: 350px;
+    color: rgb(255, 255, 255);
+}
+
+.home .home-hero .content-hero p {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.home-content {
+    max-width: 1000px;
+}
+
+.home-content .cover .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+  }
+  
+.home-content .cover .grid-container .grid-item {
+    text-align: center;
+}
+
+.home-content .cover .grid-container .grid-item h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.home-content .cover .grid-container .grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.home-content .cover .grid-container .grid-item {
+    text-align: left;
+    position: relative;
+}
+
+.home-content .cover .grid-container .grid-item .on-hover {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 120px);
+    width: 115%;
+    height: 112%;
+    background-color: rgba(77, 77, 77, 0.0);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.home-content .cover .grid-container .grid-item .on-hover:hover {
+    background-color: rgba(77, 77, 77, 0.5);
+    cursor: pointer;
+}
