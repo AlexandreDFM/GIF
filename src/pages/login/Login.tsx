@@ -1,6 +1,23 @@
 import './Login.css';
+import { useState } from 'react';
+
 
 const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = (e: any) => {
+    e.preventDefault();
+    console.log('username:', username);
+    console.log('password:', password);
+    if (username === 'admin' && password === 'root') {
+      alert('Login Successful');
+      window.location.href = '/profile';
+    } else {
+      alert('Login Failed');
+    }
+  }
+
   return (
     <>
       <div className="login-container">
@@ -14,10 +31,22 @@ const Login = () => {
           </div>
           <form className='login-form'>
             <label htmlFor="username">User Name</label>
-            <input type="text" id="username" placeholder="username@gmail.com" />
+            <input 
+              type="text" 
+              id="username" 
+              placeholder="username@gmail.com" 
+              value={username} 
+              onChange={(e) => setUsername(e.target.value)} 
+            />
 
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" placeholder="********" />
+            <input 
+              type="password" 
+              id="password" 
+              placeholder="********" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+            />
 
             <div className="remember-forgot">
               <label>
@@ -26,10 +55,8 @@ const Login = () => {
               <a href="#">Forgot Password?</a>
             </div>
 
-            <button className="login-button" type="submit">Login</button>
+            <button className="login-button" type="submit" onClick={handleLogin}>Login</button>
           </form>
-
-
           <div className="login-footer">
             New User? <a href="#">Signup</a>
           </div>
