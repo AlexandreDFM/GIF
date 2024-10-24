@@ -16,6 +16,8 @@ const AudioWaveform = ({ audioFile }) => {
         } else {
             wavesurfer.current.play();
             setIsPlaying(true);
+
+
         }
     };
 

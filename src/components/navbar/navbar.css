@@ -8,7 +8,7 @@
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: #2424249b;
+    background-color: #3c3d3741;
     backdrop-filter: blur(50px);
 }
 
@@ -19,13 +19,14 @@
 .navbar .logo h1 {
     margin: 0;
     font-size: 22px;
-    color: #ffffff;
+    color: #ECDFCC;
 }
 
 .navbar .middle {
     display: flex;
     align-items: center;
     gap: 20px;
+    color: #ECDFCC;
 }
 
 .navbar .middle .icon {
@@ -37,12 +38,12 @@
 .navbar .middle a {
     margin: 0 10px;
     text-decoration: none;
-    color: #cbcbcb;
+    color: #ECDFCC;
     font-size: 16px;
 }
 
 .navbar .middle .bold {
-    color: white;
+    color: #ECDFCC;
     font-weight: 700;
 }
 
@@ -68,9 +69,11 @@
     margin: 0 10px;
     font-size: 18px;
     margin-right: 30px;
+    color: #ECDFCC;
 }
 
 .navbar .account .icon {
     font-size: 24px;
     cursor: pointer;
+    color: #ECDFCC;
 }

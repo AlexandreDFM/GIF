@@ -11,7 +11,7 @@ import { FaVolumeUp } from "react-icons/fa";
 import { AiOutlineDownload } from "react-icons/ai";
 import { RxReset } from "react-icons/rx";
 
-import accappella from '../../assets/accapella.wav';
+import accappella from '../../assets/accapella4.wav';
 
 function Timer() {
     const [progress, setProgress] = useState(0);
