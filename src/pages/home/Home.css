@@ -1,18 +1,17 @@
 .home {
-    margin-top: 120px;
-    margin-left: 350px;
-    width: 1000px;
+    margin-left: 100px;
     margin-bottom: 150px;
+    margin-top: 100px;
+    margin-right: 100px;
 }
 
 .home .home-hero {
-    width: 1000px;
     height: 350px;
-    background-color: rgb(232,98,57);
-    position: relative;
+    background: rgb(232,98,57);
+    background: linear-gradient(90deg, rgba(232,98,57,1) 18%, rgba(147,61,35,1) 98%);    position: relative;
     border-radius: 50px;
 
-    padding: 80px 80px 50px 80px;
+    padding: 50px;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 50px;
 }
@@ -37,19 +36,19 @@
 
 .home .home-hero .content-hero .bot-hero {
     margin-top: 50px;
+    font-size: 25px;
 }
 
 .home .home-hero .content-hero .title-hero h1 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 700;
-    margin-bottom: 10px;
     color: rgb(255, 255, 255);
 }
 
 .home .home-hero .content-hero .title-hero h3 {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 300;
-    max-width: 350px;
+    max-width: 450px;
     color: rgb(255, 255, 255);
 }
 
@@ -59,14 +58,16 @@
     color: rgb(255, 255, 255);
 }
 
-.home-content {
-    max-width: 1000px;
+.home-content .title-home-one {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .home-content .cover .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
   }
   
 .home-content .cover .grid-container .grid-item {
@@ -83,22 +84,25 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 15px;
 }
 
 .home-content .cover .grid-container .grid-item {
     text-align: left;
     position: relative;
+    background-color: rgb(45, 45, 45);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgb(65, 65, 65);
 }
 
 .home-content .cover .grid-container .grid-item .on-hover {
     position: absolute;
-    top: calc(50% - 150px);
-    left: calc(50% - 120px);
-    width: 115%;
-    height: 112%;
-    background-color: rgba(77, 77, 77, 0.0);
-    border-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

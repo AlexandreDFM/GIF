@@ -13,16 +13,18 @@ import cover6 from '../../assets/cover6.jpg';
 import cover7 from '../../assets/cover7.jpg';
 import cover8 from '../../assets/cover8.jpg';
 
+import accappella from '../../assets/accapella.wav';
+
 function Home() {
     const tabCover = [
-        { id: 1, img: cover1, title: 'Vocal Studies and Uplifting Beats', description: 'Prefuse 73' },
-        { id: 2, img: cover2, title: 'Temples', description: 'Kadhja Bonet' },
-        { id: 3, img: cover3, title: 'Earth Tones', description: 'The Du-Rites' },
-        { id: 4, img: cover4, title: 'Kollection 6', description: 'Kendrick Lamar' },
-        { id: 5, img: cover5, title: 'The Epic', description: 'Kamasi Washington' },
-        { id: 6, img: cover6, title: 'The Dream', description: 'Akif' },
-        { id: 7, img: cover7, title: 'The Dream', description: 'Akif' },
-        { id: 8, img: cover8, title: 'The Dream', description: 'Akif' }
+        { id: 1, img: cover1, title: 'Vocal Studies and Uplifting Beats', description: 'Prefuse 73', audio: accappella },
+        { id: 2, img: cover2, title: 'Temples', description: 'Kadhja Bonet', audio: accappella },
+        { id: 3, img: cover3, title: 'Earth Tones', description: 'The Du-Rites', audio: accappella },
+        { id: 4, img: cover4, title: 'Kollection 6', description: 'Kendrick Lamar', audio: accappella },
+        { id: 5, img: cover5, title: 'The Epic', description: 'Kamasi Washington', audio: accappella },
+        { id: 6, img: cover6, title: 'The Dream', description: 'Akif', audio: accappella },
+        { id: 7, img: cover7, title: 'The Dream', description: 'Akif', audio: accappella },
+        { id: 8, img: cover8, title: 'The Dream', description: 'Princeton Michael', audio: accappella },
     ]
 
     return (
@@ -48,8 +50,11 @@ function Home() {
                 <img src={homehero} alt='home-hero' />
             </div>
 
-
             <div className="home-content">
+                <h1 className='title-home-one'>
+                    New Releases
+                </h1>
+
                 <div className='cover'>
                     <div className="grid-container">
                         {

@@ -112,3 +112,7 @@
     top: 40px;
     left: 28%;
 }
+
+.reset {
+    cursor: pointer;
+}

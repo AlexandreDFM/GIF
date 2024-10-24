@@ -9,12 +9,14 @@ import Profile from './pages/profile/Profile';
 import Home from './pages/home/Home';
 
 import Timer from './components/timer/timer';
+import Navbar from './components/navbar/navbar';
 
 function App() {
     const [count, setCount] = useState(0)
 
     return (
         <>
+            <Navbar />
             <Timer />
 
             <Router>
