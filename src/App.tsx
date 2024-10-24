@@ -1,24 +1,27 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    useLocation,
+} from "react-router-dom";
 
-import './App.css'
+import "./App.css";
 
-import LandingPage from './pages/landingPage/LandingPage';
-import Login from './pages/login/Login';
-import Profile from './pages/profile/Profile';
-import Home from './pages/home/Home';
+import LandingPage from "./pages/landingPage/LandingPage";
+import Login from "./pages/login/Login";
+import Profile from "./pages/profile/Profile";
+import Home from "./pages/home/Home";
 
-import Timer from './components/timer/timer';
-import Navbar from './components/navbar/navbar';
+import Timer from "./components/timer/timer";
+import Navbar from "./components/navbar/navbar";
+import { SidebarWrapper } from "./components/sidebar/sidebar";
 
 function App() {
-    const [count, setCount] = useState(0)
-
     return (
         <Router>
             <Content />
         </Router>
-    )
+    );
 }
 
 function Content() {
@@ -26,18 +29,28 @@ function Content() {
 
     return (
         <>
-            {location.pathname !== '/login' && (
-                <>
-                    <Navbar />
-                    <Timer />
-                </>
-            )}
+            {location.pathname !== "/login" &&
+                location.pathname !== "/landing" && (
+                    <>
+                        <Navbar />
+                        <Timer />
+                    </>
+                )}
+
+            {location.pathname !== "/login" &&
+                location.pathname !== "/landing" && (
+                    <SidebarWrapper>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/home" element={<Home />} />
+                            <Route path="/profile" element={<Profile />} />
+                        </Routes>
+                    </SidebarWrapper>
+                )}
 
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/profile" element={<Profile />} />
+                <Route path="/landing" element={<LandingPage />} />
             </Routes>
         </>
     );

@@ -1,0 +1,18 @@
+.sidebar-content-subtitle {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-content-subtitle:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+.sidebar-content-subtitle-icon {
+    margin-right: 10px;
+}
