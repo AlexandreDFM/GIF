@@ -5,7 +5,7 @@ import { GoSidebarCollapse } from "react-icons/go";
 
 const SidebarBtn = ({icon, onClick, children}: {icon: string, onClick: () => void, children?: React.ReactNode}) => {
     return (
-        <button className="custom-button" onClick={onClick}>
+        <button className="btn btn-primary" onClick={onClick}>
             <>
             {icon === "unfolded" ? (
                 <GoSidebarCollapse />

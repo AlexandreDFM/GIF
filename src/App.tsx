@@ -7,7 +7,7 @@ import {
 
 import "./App.css";
 
-import LandingPage from "./pages/landingPage/LandingPage";
+import Landing from "./pages/landingPage/Landing.tsx";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Home from "./pages/home/Home";
@@ -50,7 +50,7 @@ function Content() {
 
             <Routes>
                 <Route path="/login" element={<Login />} />
-                <Route path="/landing" element={<LandingPage />} />
+                <Route path="/landing" element={<Landing />} />
             </Routes>
         </>
     );

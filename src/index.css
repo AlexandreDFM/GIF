@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
+  --dark-bg: #181C14;
+  --primary-color: #3C3D37;
+  --secondary-color: #697565;
+  --light-bg: #ECDFCC;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -19,4 +24,53 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 25px;
+  align-items: center;
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+  background-color: #3C3D37;
+  color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #3C3D37;
+  color: #3C3D37;
+}
+
+.btn-secondary:hover {
+  background-color: #3C3D37;
+  color: #fff;
+}
+
+.btn.prev {
+  left: 10px;
+}
+
+.btn.next {
+  right: 10px;
 }
