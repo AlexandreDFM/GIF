@@ -1,0 +1,192 @@
+.acapella-generator {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 70px;
+    margin-bottom: 150px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.acapella-generator {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 70px;
+    margin-bottom: 150px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+    display: flex;
+    height: 300px;
+    background: linear-gradient(90deg, rgba(57,98,232,1) 18%, rgba(35,61,147,1) 98%);
+    border-radius: 50px;
+    padding: 50px;
+    position: relative;
+    color: #ECDFCC;
+    overflow: hidden; /* Ensures content fits within the container */
+}
+
+.hero-section .content-hero {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.hero-section h3 {
+    font-size: 20px;
+    font-weight: 300;
+    max-width: 450px;
+}
+
+/*.hero-section img {*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover; !* This ensures the image fits inside the container *!*/
+/*    border-radius: 50px;*/
+/*}*/
+
+
+/*.hero-section {*/
+/*    display: flex;*/
+/*    height: 300px;*/
+/*    background: linear-gradient(90deg, rgba(57,98,232,1) 18%, rgba(35,61,147,1) 98%);*/
+/*    border-radius: 50px;*/
+/*    padding: 50px;*/
+/*    position: relative;*/
+/*    color: #ECDFCC;*/
+/*}*/
+
+/*.hero-section .content-hero {*/
+/*    max-width: 500px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.hero-section h1 {*/
+/*    font-size: 60px;*/
+/*    font-weight: 700;*/
+/*}*/
+
+/*.hero-section h3 {*/
+/*    font-size: 20px;*/
+/*    font-weight: 300;*/
+/*    max-width: 450px;*/
+/*}*/
+
+.hero-section img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    transform: translateX(30px) translateY(20px) rotate(-10deg) scale(1.2);
+}
+
+.chat-section {
+    margin-top: 50px;
+}
+
+.chat-section .chat-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ECDFCC;
+    margin-bottom: 20px;
+}
+
+.chat-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chat-section input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #69756581;
+    background-color: #3C3D37;
+    color: #ECDFCC;
+    font-size: 18px;
+}
+
+.chat-section button {
+    width: 200px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ECDFCC;
+    color: #3C3D37;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-section button:hover {
+    background-color: #3C3D37;
+    color: #ECDFCC;
+}
+
+.response p {
+    font-size: 18px;
+    color: #ECDFCC;
+    margin-top: 20px;
+}
+
+.input-with-button {
+    width: 100%;
+}
+
+.input-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 15px 100px 15px 20px; /* Add padding to the right to make space for the button */
+    border-radius: 15px;
+    border: 1px solid #69756581;
+    background-color: #3C3D37;
+    color: #ECDFCC;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.input-wrapper button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-65%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ECDFCC;
+    color: #3C3D37;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-wrapper button:hover {
+    background-color: #3C3D37;
+    color: #ECDFCC;
+}
+
+.input-wrapper button:disabled {
+    cursor: not-allowed;
+    background-color: #bbb;
+}
+

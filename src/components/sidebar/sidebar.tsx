@@ -1,4 +1,5 @@
 import "./sidebar.css";
+import { GrRobot } from "react-icons/gr";
 import { FaCompass } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
 import { BiSolidAlbum } from "react-icons/bi";
@@ -59,9 +60,9 @@ export const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
                 },
                 {
                     id: 4,
-                    title: "Genre",
-                    description: "Genre Page",
-                    icon: "genre",
+                    title: "Generate",
+                    description: "Generate Page",
+                    icon: "generate",
                     href: "/",
                     display: true,
                 },
@@ -110,7 +111,7 @@ export const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
         compass: <FaCompass />,
         album: <BiSolidAlbum />,
         tracks: <MdAudiotrack />,
-        genre: <IoMdMusicalNote />,
+        generate: <GrRobot />,
     };
 
     return (

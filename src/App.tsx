@@ -15,6 +15,7 @@ import Home from "./pages/home/Home";
 import Timer from "./components/timer/timer";
 import Navbar from "./components/navbar/navbar";
 import { SidebarWrapper } from "./components/sidebar/sidebar";
+import Generate from "./pages/generate/Generate.tsx";
 
 function App() {
     return (
@@ -51,6 +52,7 @@ function Content() {
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/landing" element={<Landing />} />
+                <Route path="/generate" element={<Generate />} />
             </Routes>
         </>
     );
