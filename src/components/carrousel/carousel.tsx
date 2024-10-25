@@ -1,4 +1,4 @@
-import "./Carousel.css";
+import "./carousel.css";
 import { useEffect, useState } from "react";
 import { CarouselProps } from "./carousel-props.ts";
 
