@@ -31,7 +31,7 @@ export default function Landing() {
                 </nav>
             </header>
 
-                {/*This is a platform designed to connect singers and composers in a collaborative space for music creation. The platform allows singers to upload and share acapella recordings, giving composers easy access to raw vocal tracks to inspire new musical compositions. This platform streamlines the process of finding fresh vocal talent and provides a space where musicians from around the world can collaborate. Singers can showcase their voices, even without a studio, while composers can browse a variety of acapella tracks to find the perfect match for their next project. It aims to be a hub for creative musical partnerships and innovation.*/}
+                {/*This is a platform designed to connect singers and composers in a collaborative space for music creation. The platform allows singers to upload and share a_cappella recordings, giving composers easy access to raw vocal tracks to inspire new musical compositions. This platform streamlines the process of finding fresh vocal talent and provides a space where musicians from around the world can collaborate. Singers can showcase their voices, even without a studio, while composers can browse a variety of a_cappella tracks to find the perfect match for their next project. It aims to be a hub for creative musical partnerships and innovation.*/}
             <section className="hero">
                 <div className="hero-content">
                     <h1>Find the ideal voice for you</h1>

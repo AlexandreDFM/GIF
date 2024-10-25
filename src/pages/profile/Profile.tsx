@@ -11,12 +11,12 @@ import account from '../../assets/guy.jpg';
 import { IoPlaySharp } from "react-icons/io5";
 import { AiOutlineDownload } from "react-icons/ai";
 
-import accappella from '../../assets/accapella.wav';
-import accappella2 from '../../assets/accapella2.wav';
-import accappella3 from '../../assets/accapella3.wav';
-import accappella4 from '../../assets/accapella4.wav';
-import accappella5 from '../../assets/accapella5.wav';
-import accappella6 from '../../assets/accapella6.wav';
+import a_cappella from '../../assets/accapella.wav';
+import a_cappella2 from '../../assets/accapella2.wav';
+import a_cappella3 from '../../assets/accapella3.wav';
+import a_cappella4 from '../../assets/accapella4.wav';
+import a_cappella5 from '../../assets/accapella5.wav';
+import a_cappella6 from '../../assets/accapella6.wav';
 import jones from '../../assets/jones.mp3';
 
 import AudioWaveform from '../../components/AudioWaveform/AudioWaveform';
@@ -46,12 +46,12 @@ function Profile() {
     }, []);
 
     const tabCover = [
-        { id: 1, img: cover1, title: 'Vocal Studies', description: 'Prefuse 73', song: accappella },
-        { id: 2, img: cover2, title: 'Temples', description: 'Kadhja Bonet', song: accappella2 },
-        { id: 3, img: cover3, title: 'Earth Tones', description: 'The Du-Rites', song: accappella3 },
-        { id: 4, img: cover4, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella4 },
-        { id: 5, img: cover5, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella5 },
-        { id: 6, img: cover6, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella6 },
+        { id: 1, img: cover1, title: 'Vocal Studies', description: 'Prefuse 73', song: a_cappella },
+        { id: 2, img: cover2, title: 'Temples', description: 'Kadhja Bonet', song: a_cappella2 },
+        { id: 3, img: cover3, title: 'Earth Tones', description: 'The Du-Rites', song: a_cappella3 },
+        { id: 4, img: cover4, title: 'The Du-Rites', description: 'The Du-Rites', song: a_cappella4 },
+        { id: 5, img: cover5, title: 'The Du-Rites', description: 'The Du-Rites', song: a_cappella5 },
+        { id: 6, img: cover6, title: 'The Du-Rites', description: 'The Du-Rites', song: a_cappella6 },
         { id: 7, img: cover7, title: 'Les Jones', description: 'The Du-Rites', song: jones },
     ]
 

@@ -4,7 +4,6 @@ import { FaCompass } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
 import { BiSolidAlbum } from "react-icons/bi";
 import { MdAudiotrack } from "react-icons/md";
-import { IoMdMusicalNote } from "react-icons/io";
 import { SidebarItem } from "./sidebar-item.tsx";
 
 export interface SidebarPageRedirect {

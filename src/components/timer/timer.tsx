@@ -11,7 +11,7 @@ import { FaVolumeUp } from "react-icons/fa";
 import { AiOutlineDownload } from "react-icons/ai";
 import { RxReset } from "react-icons/rx";
 
-import accappella from '../../assets/accapella4.wav';
+import a_cappella from '../../assets/accapella4.wav';
 
 function Timer() {
     const [progress, setProgress] = useState(0);
@@ -75,11 +75,11 @@ function Timer() {
 
                 <div className="progress-container">
                     <div className="progress-input">
-                        <a href={accappella} download="my-audio-file.wav">
+                        <a href={a_cappella} download="my-audio-file.wav">
                             <AiOutlineDownload size={25} />
                         </a>
                         <MdSkipPrevious size={30} />
-                        <audio ref={audioRef} src={accappella} />
+                        <audio ref={audioRef} src={a_cappella} />
                         <div className="play-pause" onClick={() => (isSongIsPlaying ? pauseAudio() : playAudio())}>
                             {isSongIsPlaying ? (
                                 <IoPauseSharp size={15} />
