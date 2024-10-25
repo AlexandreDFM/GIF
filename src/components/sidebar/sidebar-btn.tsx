@@ -1,4 +1,3 @@
-import React from 'react';
 import './sidebar-btn.css';
 import { GoSidebarExpand } from "react-icons/go";
 import { GoSidebarCollapse } from "react-icons/go";

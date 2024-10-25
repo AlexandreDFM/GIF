@@ -1,15 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import WaveSurfer from 'wavesurfer.js';
 import { IoPlaySharp, IoPauseSharp } from "react-icons/io5";
 import { RxReset } from "react-icons/rx";
 import './audio.css';
 
-const AudioWaveform = ({ audioFile }) => {
-    const waveformRef = useRef(null);
-    const wavesurfer = useRef(null);
+const AudioWaveform = ({ audioFile }: { audioFile: string }) => {
+    const waveformRef = useRef<HTMLDivElement>(null);
+    const wavesurfer = useRef<WaveSurfer | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
     const handlePlayPause = () => {
+        if (!wavesurfer.current) return;
         if (wavesurfer.current.isPlaying()) {
             wavesurfer.current.pause();
             setIsPlaying(false);
@@ -30,7 +31,7 @@ const AudioWaveform = ({ audioFile }) => {
                 progressColor: 'rgb(180, 180, 180)',
                 height: 40,
                 barWidth: 2,
-                responsive: true,
+                // responsive: true,
                 cursorWidth: 0,
             });
 
@@ -38,7 +39,11 @@ const AudioWaveform = ({ audioFile }) => {
             wavesurfer.current.load(audioFile);
 
             // Nettoyage lors du démontage
-            return () => wavesurfer.current.destroy();
+            return () => {
+                if (wavesurfer.current) {
+                    wavesurfer.current.destroy();
+                }
+            }
         }
     }, [audioFile]);
 
@@ -52,7 +57,10 @@ const AudioWaveform = ({ audioFile }) => {
                 )}
             </div>
             
-            <RxReset size={25} onClick={() => wavesurfer.current.seekTo(0)} style={{ cursor: 'pointer' }} />
+            <RxReset size={25} onClick={() => {
+                if (!wavesurfer.current) return;
+                wavesurfer.current.seekTo(0)
+            }} style={{ cursor: 'pointer' }} />
 
 
             <div ref={waveformRef} style={{ flex: 1 }} /> {/* La waveform prend tout l'espace disponible */}

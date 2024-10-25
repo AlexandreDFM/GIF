@@ -1,6 +1,5 @@
 import "./sidebar-item.css";
 
-
 export const SidebarItem = (props: { title: string, icon?: JSX.Element, href: string }) => {
     return (
         <div className="sidebar-item">

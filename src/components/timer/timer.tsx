@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
 import './timer.css';
+import { useState, useRef, useEffect } from 'react';
 
 import cover1 from '../../assets/cover1.jpg';
 import { MdSkipNext } from "react-icons/md";
@@ -17,7 +17,7 @@ function Timer() {
     const [progress, setProgress] = useState(0);
     const [isSongIsPlaying, setIsSongIsPlaying] = useState(false);
 
-    const audioRef = useRef(null);
+    const audioRef = useRef<HTMLAudioElement>(null);
 
     const playAudio = () => {
         if (audioRef.current) {
@@ -40,11 +40,11 @@ function Timer() {
         }
     };
 
-    const downloadAudio = () => {
-        if (audioRef.current) {
-            window.open(audioRef.current.src);
-        }
-    }
+    // const downloadAudio = () => {
+    //     if (audioRef.current) {
+    //         window.open(audioRef.current.src);
+    //     }
+    // }
 
     useEffect(() => {
         const audioElement = audioRef.current;
@@ -91,7 +91,8 @@ function Timer() {
 
                         <div className='reset' onClick={() => {
                             setProgress(0);
-                            audioRef.current.currentTime = 0;
+                            if (audioRef.current)
+                                audioRef.current.currentTime = 0;
                             pauseAudio();
                         }}>
                             <RxReset size={25} />
