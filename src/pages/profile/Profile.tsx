@@ -5,6 +5,8 @@ import cover3 from '../../assets/cover3.jpg';
 import cover4 from '../../assets/cover4.jpg';
 import cover5 from '../../assets/cover5.jpg';
 import cover6 from '../../assets/cover6.jpg';
+import cover7 from '../../assets/cover7.jpg';
+import cover8 from '../../assets/cover8.jpg';
 import account from '../../assets/guy.jpg';
 
 import { IoPlaySharp } from "react-icons/io5";
@@ -16,20 +18,14 @@ import accappella3 from '../../assets/accapella3.wav';
 import accappella4 from '../../assets/accapella4.wav';
 import accappella5 from '../../assets/accapella5.wav';
 import accappella6 from '../../assets/accapella6.wav';
+import jones from '../../assets/jones.mp3';
 
 import AudioWaveform from '../../components/AudioWaveform/AudioWaveform';
-import {useState, useEffect, useMemo} from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 function Profile() {
+    const audioRef = useRef<HTMLAudioElement | null>(null);
     const [durations, setDurations] = useState<number[]>([]);
-    const tabCover = useMemo(() => [
-        { id: 1, img: cover1, title: 'Vocal Studies', description: 'Prefuse 73', song: accappella },
-        { id: 2, img: cover2, title: 'Temples', description: 'Kadhja Bonet', song: accappella2 },
-        { id: 3, img: cover3, title: 'Earth Tones', description: 'The Du-Rites', song: accappella3 },
-        { id: 4, img: cover4, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella4 },
-        { id: 5, img: cover5, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella5 },
-        { id: 6, img: cover6, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella6 },
-    ], []);
 
     useEffect(() => {
         const audioElements = tabCover.map((cover) => {
@@ -49,8 +45,17 @@ function Profile() {
                 audio.removeEventListener('loadedmetadata', () => { });
             });
         };
-    }, [tabCover]);
+    }, []);
 
+    const tabCover = [
+        { id: 1, img: cover1, title: 'Vocal Studies', description: 'Prefuse 73', song: accappella },
+        { id: 2, img: cover2, title: 'Temples', description: 'Kadhja Bonet', song: accappella2 },
+        { id: 3, img: cover3, title: 'Earth Tones', description: 'The Du-Rites', song: accappella3 },
+        { id: 4, img: cover4, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella4 },
+        { id: 5, img: cover5, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella5 },
+        { id: 6, img: cover6, title: 'The Du-Rites', description: 'The Du-Rites', song: accappella6 },
+        { id: 7, img: cover7, title: 'Les Jones', description: 'The Du-Rites', song: jones },
+    ]
 
     const formatDuration = (duration: number) => {
         if (!duration) return '0:00';
