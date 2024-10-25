@@ -62,7 +62,7 @@ export const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
                     title: "Generate",
                     description: "Generate Page",
                     icon: "generate",
-                    href: "/",
+                    href: "/generate",
                     display: true,
                 },
             ],
