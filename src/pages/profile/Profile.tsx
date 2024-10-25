@@ -6,7 +6,6 @@ import cover4 from '../../assets/cover4.jpg';
 import cover5 from '../../assets/cover5.jpg';
 import cover6 from '../../assets/cover6.jpg';
 import cover7 from '../../assets/cover7.jpg';
-import cover8 from '../../assets/cover8.jpg';
 import account from '../../assets/guy.jpg';
 
 import { IoPlaySharp } from "react-icons/io5";
@@ -24,7 +23,6 @@ import AudioWaveform from '../../components/AudioWaveform/AudioWaveform';
 import { useRef, useState, useEffect } from 'react';
 
 function Profile() {
-    const audioRef = useRef<HTMLAudioElement | null>(null);
     const [durations, setDurations] = useState<number[]>([]);
 
     useEffect(() => {
