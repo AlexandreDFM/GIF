@@ -20,7 +20,7 @@ import accappella6 from '../../assets/accapella6.wav';
 import jones from '../../assets/jones.mp3';
 
 import AudioWaveform from '../../components/AudioWaveform/AudioWaveform';
-import { useRef, useState, useEffect } from 'react';
+import {  useState, useEffect } from 'react';
 
 function Profile() {
     const [durations, setDurations] = useState<number[]>([]);
